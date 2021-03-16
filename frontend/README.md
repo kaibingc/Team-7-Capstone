@@ -1,8 +1,10 @@
-# front-end
+# frontend
 
 ## Project setup
 ```
-npm install
+npm install vuetify
+npm install vue-router
+npm install sass sass-loader deepmerge -D --force
 ```
 
 ### Compiles and hot-reloads for development
