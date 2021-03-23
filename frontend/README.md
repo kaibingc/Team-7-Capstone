@@ -2,9 +2,7 @@
 
 ## Project setup
 ```
-npm install vuetify
-npm install vue-router
-npm install sass sass-loader deepmerge -D --force
+npm install 
 ```
 
 ### Compiles and hot-reloads for development
