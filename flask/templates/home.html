@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %} Home Page {% endblock %}
+
+{% block content %}
+
+	<div class='container'>
+		<br/>
+    	<div class="card" style="width: 18rem;">
+  <div class="card-body">
+	    <h5 class="card-title"> Select Video Feed </h5>
+	  
+	   <p>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#Osaka" aria-expanded="false" aria-controls="Osaka">Osaka Live</button>
+
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#Webcam" aria-expanded="false" aria-controls="Webcam">Local Webcam</button>
+</p>
+
+  </div>
+</div>
+</br>
+<div class='card'>
+	<div class="row">
+		{% for vid in videos %}
+  <div class="col">
+    <div class="collapse multi-collapse" id={{vid}}>
+      <div class="card card-body">
+        
+        	<h2>{{vid}}</h2>
+       
+       {% if vid == 'Osaka' %}
+			<iframe width="500" height="300" src="https://www.youtube.com/embed/7LhrNXU1fFo?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+		{% else %}
+			<video width="500" height="300" autoplay muted> <source src = '../static/img/gardenfight.mp4' type='video/mp4'>
+			</video>
+
+		{% endif %}
+
+
+        <br/>
+        <form action="/review/{{vid}}" method='POST'>
+        <input class="btn btn-primary" type="submit" value="Review Alert History"></button>
+</form>
+      </div>
+    </div>
+  </div>
+   {% endfor %}
+  <!-- <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample2">
+      <div class="card card-body">
+        Local Webcam
+        <img src='../static/img/garden_fight.jpg' width="500" height="300"/> <br/>
+        <form action="/review" method='POST'>
+        <input class="btn btn-primary" type="submit" name="submit_button" value="Review Alert History"></button>
+</form>
+      </div>
+    </div>
+  </div> -->
+</div>
+</div>
+
+    </div>
+
+{% endblock %}

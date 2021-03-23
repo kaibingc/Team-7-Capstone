@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+{% block title %} Review Page {% endblock %}
+
+{% block content %}
+
+</br>
+
+
+	<div class="container">
+		<form action="/" method='POST'>
+        <input class="btn btn-primary" type="submit" name="submit_button" value="< Back to Live Feed"></button>
+</form>
+		<br/>
+		<div class="row">
+			<div class="col-4">
+
+		<h2> Filters </h2>
+		<div class="card w-100" style="width: 18rem;">
+  <div class="card-body">
+	    
+		<div class="input-group mb-3">
+  <label class="input-group-text" for="inputGroupSelect01"><br/> <i class="bi bi-calendar-event"></i> </label>
+  <select class="form-select" id="inputGroupSelect01">
+    <option selected>Select Start Date...</option>
+    <option value="1">One</option>
+    <option value="2">Two</optio>
+    <option value="3">Three</option>
+  </select>
+</div>
+
+<div class="input-group mb-3">
+  <label class="input-group-text" for="inputGroupSelect01"><br/> <i class="bi bi-calendar-event"></i> </label>
+  <select class="form-select" id="inputGroupSelect01">
+    <option selected>Select End Date...</option>
+    <option value="1">One</option>
+    <option value="2">Two</optio>
+    <option value="3">Three</option>
+  </select>
+</div>
+
+<div class="input-group mb-3">
+  <label class="input-group-text" for="inputGroupSelect01"><i class="bi-alarm"></i></label>
+  <select class="form-select" id="inputGroupSelect01">
+    <option selected>Select Time Range (start)</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
+
+<div class="input-group mb-3">
+  <label class="input-group-text" for="inputGroupSelect01"><i class="bi-alarm"></i></label>
+  <select class="form-select" id="inputGroupSelect01">
+    <option selected>Select Time Range (end)</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
+
+<div class="input-group mb-3">
+  <label class="input-group-text" for="inputGroupSelect01"><i class="bi bi-emoji-dizzy"></i></label>
+  <select class="form-select" id="inputGroupSelect01">
+    <option selected>Select Action...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
+</div>
+</div>
+</div>
+
+
+</br>
+
+
+</br>
+			<div class="col-8">
+    	<h2>
+	Alert History
+	({{vid_name}})
+
+
+</h2>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">	<br/><button class="btn btn-primary" type="button" >Export <i class="bi bi-download"></i></button>
+</div><br/>
+    	<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Time</th>
+      <th scope="col">Action Flagged</th>
+      <th scope="col">Video Input</th>
+       <th scope="col">Screenshot</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">30/1/21</th>
+      <td>18:00</td>
+      <td>Punching</td>
+      <td>Osaka Live</td>
+      <td><i class="bi bi-image"></i></i>
+</i>
+</td>
+    </tr>
+    <tr>
+      <th scope="row">30/1/21</th>
+      <td>16:00</td>
+      <td>Falling Down</td>
+      <td>Osaka Live</td>
+      <td><i class="bi bi-image"></i></i>
+    </tr>
+    <tr>
+      <th scope="row">30/1/21</th>
+      <td>13:00</td>
+      <td>Kicking</td>
+      <td>Osaka Live</td>
+      <td><i class="bi bi-image"></i></i>
+    </tr>
+  </tbody>
+</table>
+	</div>
+</div>
+
+{% endblock %}
